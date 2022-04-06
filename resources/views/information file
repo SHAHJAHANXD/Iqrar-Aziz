@@ -1,0 +1,2 @@
+if want to add footer in login page the
+ @include('footer') 
