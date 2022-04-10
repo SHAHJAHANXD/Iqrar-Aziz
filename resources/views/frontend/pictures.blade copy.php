@@ -7,32 +7,32 @@
   <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">  -->
 <link href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 
-<link rel="icon" href="{{url('public/frontend/img/logo_2.png')}}">
+<link rel="icon" href="{{url('frontend/img/logo_2.png')}}">
 <!-- Bootstrap core JavaScript-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<link href="{{url('public/assets/img/favicon.png')}}" rel="icon">
+<link href="{{url('assets/img/favicon.png')}}" rel="icon">
 <!-- Page level plugin JavaScript--><script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans"> 
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
 <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
-<!-- <link href="{{url('public/frontend/css/responsive-style.css')}}" rel="stylesheet" type="text/css"/> -->
+<!-- <link href="{{url('frontend/css/responsive-style.css')}}" rel="stylesheet" type="text/css"/> -->
  <!-- Vendor CSS Files -->
-  <link href="{{url('public/assets/vendor/aos/aos.css')}}" rel="stylesheet">
-  <link href="{{url('public/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-  <link href="{{url('public/assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
-  <link href="{{url('public/assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
-  <link href="{{url('public/assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+  <link href="{{url('assets/vendor/aos/aos.css')}}" rel="stylesheet">
+  <link href="{{url('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url('assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{url('assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{url('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="{{url('public/assets/css/style.css')}}" rel="stylesheet">
+  <link href="{{url('assets/css/style.css')}}" rel="stylesheet">
 
 
     <title>View Anomaly </title>
     <style>
-      
+
       body{
          font-weight: 400;
         color: #616161;
-        background-color: #eee; 
+        background-color: #eee;
         font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
         font-size: 13px;
         }
@@ -42,7 +42,7 @@
         }
         table td{
           text-align: left;
-            
+
         }
         table tr:nth-child(even){
         background-color: #e4e3e3 !important;
@@ -65,13 +65,13 @@
             height: 70px;
             animation: spin 1s linear infinite;
         }
-          
+
         @keyframes spin {
             100% {
                 transform: rotate(360deg);
             }
         }
-          
+
         .center {
             position: absolute;
             top: 0;
@@ -111,57 +111,57 @@ $(function () {
   });
 
 
-</script> 
+</script>
 
 </head>
 
 <body>
- 
+
 
     <header id="header" class="fixed-top d-flex align-items-center" style="background: linear-gradient(to right, rgba(39, 70, 133, 0.8) 0%, rgba(61, 179, 197, 0.8) 100%) !important;">
     <div class="container d-flex justify-content-between align-items-center">
 
-    
+
 
    @include('navigation')
     </div>
   </header><!-- End Header -->
 <!-- <div id="loader" class="center"></div> -->
-<div><img src="{{url('public/assets/load.gif')}}" class="center" id="loader"/></div>
+<div><img src="{{url('assets/load.gif')}}" class="center" id="loader"/></div>
 <div class="section">
-<div class="container" > 
- 
+<div class="container" >
+
     <table class="table table-bordered" id="dataTable"  cellspacing="0">
         <thead>
             <tr>
-          <th>S.No.</th> 
+          <th>S.No.</th>
           <th>Source IP</th>
           <th>Source Port</th>
-          <th>Destination IP</th> 
+          <th>Destination IP</th>
           <th>Destination Port</th>
-          <th>Attack</th> 
-          <th>Protocol</th>     
-        </tr> 
+          <th>Attack</th>
+          <th>Protocol</th>
+        </tr>
       </thead>
       <tbody>
       <?php $counter=0; ?>
-         
+
         @foreach($mlids as $display)
-         
+
         <tr>
-          <td><?php echo ++$counter; ?></td> 
+          <td><?php echo ++$counter; ?></td>
           <td>{{$display->sourceip}}</td>
           <td>{{$display->sourceport}}</td>
-          <td>{{$display->destinationip}}</td> 
+          <td>{{$display->destinationip}}</td>
           <td>{{$display->destinationport}}</td>
-          <td>{{$display->Attack}}</td> 
-          <td>{{$display->protocol}}</td>   
+          <td>{{$display->Attack}}</td>
+          <td>{{$display->protocol}}</td>
       </tr>
-  
+
         @endforeach
       </tbody>
     </table>
-    </div> 
+    </div>
 </div>
   <script>
         document.onreadystatechange = function() {

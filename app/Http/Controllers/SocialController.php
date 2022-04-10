@@ -2,20 +2,36 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Company;
-use App\Models\Profile;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Facades\Auth;
 use Exception;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Session;
 
-use function Ramsey\Uuid\v1;
-
-class GoogleController extends Controller
+class SocialController extends Controller
 {
+    public function index()
+    {
+        return view('frontend.index');
+    }
+
+    public function home()
+    {
+        return view('frontend.index');
+    }
+    public function login()
+    {
+        return view('auth.login');
+    }
+
+    public function Logout()
+    {
+        Auth::logout();
+        Session::flush();
+        return redirect()->route('index');
+    }
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
@@ -27,7 +43,7 @@ class GoogleController extends Controller
 
     public function show()
     {
-        return view('user.auth.signin');
+        return view('auth.login');
     }
 
     public function redirectToProvider($driver)
@@ -107,8 +123,6 @@ class GoogleController extends Controller
             $user->save();
 
             Auth::login($user, true);
-            $email = $providerUser->getEmail();
-            return $this->saveProfile($email);
         }
     }
     private function isProviderAllowed($driver)

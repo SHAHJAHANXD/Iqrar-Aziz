@@ -11,26 +11,26 @@
     <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">  -->
     <link href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 
-    <link rel="icon" href="{{url('public/frontend/img/logo_2.png')}}">
+    <link rel="icon" href="{{url('frontend/img/logo_2.png')}}">
     <!-- Bootstrap core JavaScript-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link href="{{url('public/assets/img/favicon.png')}}" rel="icon">
+    <link href="{{url('assets/img/favicon.png')}}" rel="icon">
     <!-- Page level plugin JavaScript-->
     <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
     <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js">
-        
+
     </script>
-<!-- <link href="{{url('public/frontend/css/responsive-style.css')}}" rel="stylesheet" type="text/css"/> -->
+<!-- <link href="{{url('frontend/css/responsive-style.css')}}" rel="stylesheet" type="text/css"/> -->
     <!-- Vendor CSS Files -->
-    <link href="{{url('public/assets/vendor/aos/aos.css')}}" rel="stylesheet">
-    <link href="{{url('public/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{url('public/assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
-    <link href="{{url('public/assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
-    <link href="{{url('public/assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+    <link href="{{url('assets/vendor/aos/aos.css')}}" rel="stylesheet">
+    <link href="{{url('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url('assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+    <link href="{{url('assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+    <link href="{{url('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
     <!-- Template Main CSS File -->
-    <link href="{{url('public/assets/css/style.css')}}" rel="stylesheet">
+    <link href="{{url('assets/css/style.css')}}" rel="stylesheet">
 
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -270,8 +270,8 @@
 
                             <div class="form-group row">
                                 <div class="col-md-6 offset-md-3">
-                        
-                                    <a href="{{route('login.google')}}" class="btn btn-danger btn-block">Login with Google</a>
+
+                                    <a href="{{ route('social.oauth', 'google') }}" class="btn btn-danger btn-block">Login with Google</a>
                                     <a href="{{route('login.facebook')}}" class="btn btn-block" style="color:white ;background-color: #395697 " >Login with Facebook</a>
                                     <a href="{{route('login.github')}}" class="btn btn-dark btn-block">Login with Github</a>
                                 </div>

@@ -7,44 +7,44 @@
     <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">  -->
     <link href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 
-    <link rel="icon" href="{{url('public/frontend/img/logo_2.png')}}">
+    <link rel="icon" href="{{url('frontend/img/logo_2.png')}}">
     <!-- Bootstrap core JavaScript-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link href="{{url('public/assets/img/favicon.png')}}" rel="icon">
+    <link href="{{url('assets/img/favicon.png')}}" rel="icon">
     <!-- Page level plugin JavaScript--><script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
     <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
-<!-- <link href="{{url('public/frontend/css/responsive-style.css')}}" rel="stylesheet" type="text/css"/> -->
+<!-- <link href="{{url('frontend/css/responsive-style.css')}}" rel="stylesheet" type="text/css"/> -->
     <!-- Vendor CSS Files -->
-    <link href="{{url('public/assets/vendor/aos/aos.css')}}" rel="stylesheet">
-    <link href="{{url('public/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{url('public/assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
-    <link href="{{url('public/assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
-    <link href="{{url('public/assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+    <link href="{{url('assets/vendor/aos/aos.css')}}" rel="stylesheet">
+    <link href="{{url('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url('assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+    <link href="{{url('assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+    <link href="{{url('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="{{url('public/assets/css/style.css')}}" rel="stylesheet">
+    <link href="{{url('assets/css/style.css')}}" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 
-    <link rel="icon" href="{{url('public/frontend/img/logo_2.png')}}">
+    <link rel="icon" href="{{url('frontend/img/logo_2.png')}}">
     <!-- Bootstrap core JavaScript-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link href="{{url('public/assets/img/favicon.png')}}" rel="icon">
+    <link href="{{url('assets/img/favicon.png')}}" rel="icon">
     <!-- Page level plugin JavaScript-->
     <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
     <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
 
-<!-- <link href="{{url('public/frontend/css/responsive-style.css')}}" rel="stylesheet" type="text/css"/> -->
+<!-- <link href="{{url('frontend/css/responsive-style.css')}}" rel="stylesheet" type="text/css"/> -->
     <!-- Vendor CSS Files -->
-    <link href="{{url('public/assets/vendor/aos/aos.css')}}" rel="stylesheet">
-    <link href="{{url('public/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{url('public/assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
-    <link href="{{url('public/assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
-    <link href="{{url('public/assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+    <link href="{{url('assets/vendor/aos/aos.css')}}" rel="stylesheet">
+    <link href="{{url('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url('assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+    <link href="{{url('assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+    <link href="{{url('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
     <!-- Template Main CSS File -->
-    <link href="{{url('public/assets/css/style.css')}}" rel="stylesheet">
+    <link href="{{url('assets/css/style.css')}}" rel="stylesheet">
 
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -260,7 +260,7 @@
             position:fixed;
             z-index:9999;
             float: center;*/
-        /*background-image:url({{url('public/assets/load.gif')}})*/
+        /*background-image:url({{url('assets/load.gif')}})*/
         /*background:url({{url('images/php_mysql.jpg')}}) no-repeat center center rgba(0,0,0,0.25)*/
 
         /*.loader {
@@ -270,7 +270,7 @@
             width: 100%;
             height: 100%;
             z-index: 9999;
-            /*background: url('public/assets/load.gif') 50% 50% no-repeat rgb(249,249,249);*/
+            /*background: url('assets/load.gif') 50% 50% no-repeat rgb(249,249,249);*/
         /*opacity: .8;
     }*/
     </style>
@@ -326,18 +326,18 @@
         </div>
     </header><!-- End Header -->
 
-<!-- 
+<!--
     include dashboard -->
 
      @include('dashboard')
 
 
     <!-- <div id="loader" class="center"></div> -->
-    <div><img src="{{url('public/assets/load.gif')}}" class="center" id="loader"/></div>
+    <div><img src="{{url('assets/load.gif')}}" class="center" id="loader"/></div>
     <div class="section">
         <div class="container" >
             <h1> statistics</h1>
-           
+
         </div>
     </div>
     <script>
