@@ -4,14 +4,12 @@
 </div>
 <nav id="navbar" class="navbar">
     <ul>
-        @if (Auth::guard('web')->check() === true)
         <li><a href="{{ route('index') }}" class="">Home</a></li>
         <li><a href="{{ url('Fileview') }}"> View PCAPs</a></li>
         <li><a href="{{ route('Logout') }}"> Logout</a></li>
-    @else
             <li><a href="{{ route('index') }}" class="">Home</a></li>
             <li><a href="{{ route('social.login') }}"> Sign In</a></li>
-        @endif
+
     </ul>
     <i class="bi bi-list mobile-nav-toggle"></i>
-</nav><!-- .navbar -->
+</nav>

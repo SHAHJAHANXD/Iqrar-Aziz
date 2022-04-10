@@ -17,13 +17,14 @@ use Illuminate\Support\Facades\Hash;
 class authcontroller extends Controller
 {
 
-    //for github login 
+    //for github login
     public function githubredirect(Request $request)
     {
         return Socialite::driver('github')->redirect();
+        return view('list', compact('showbuyer'));
     }
 
-    
+
     public function githubcallback(Request $request)
     {
         $userdata = Socialite::driver('github')->user();
@@ -47,7 +48,7 @@ class authcontroller extends Controller
         Auth::login($user);
         return redirect('/');
         }
-        
+
     }
 
     // for google login
@@ -57,7 +58,7 @@ class authcontroller extends Controller
         return Socialite::driver('google')->redirect();
     }
 
-    
+
     public function googlecallback(Request $request)
     {
         $userdata = Socialite::driver('google')->user();
@@ -81,6 +82,6 @@ class authcontroller extends Controller
         Auth::login($user);
         return redirect('/');
         }
-        
+
     }
 }

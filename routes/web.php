@@ -5,6 +5,7 @@ use App\Http\Controllers\authcontroller;
 use App\Http\Controllers\Auth\GoogleController;
 use App\Http\Controllers\Auth\GithubController;
 use App\Http\Controllers\GoogleController as ControllersGoogleController;
+use App\Http\Controllers\PCAPController;
 use App\Http\Controllers\SocialController;
 use Illuminate\Support\Facades\Route;
 
@@ -74,3 +75,30 @@ Route::get('/auth/github/callback', [GithubController::class, 'handleGithubCallb
 // facebook login
 Route::get('/auth/facebook/redirect', [authcontroller::class, 'facebookredirect'])->name('login.facebook');
 Route::get('/auth/facebook/callback', [authcontroller::class, 'facebookcallback']);
+
+
+Route::prefix('pcap')->group(function () {
+    Route::get('/list', [PCAPController::class, 'list'])->name('pcap.list');
+    Route::get('/overview', [PCAPController::class, 'overview'])->name('pcap.overview');
+    Route::get('/credentials', [PCAPController::class, 'credentials'])->name('pcap.credentials');
+    Route::get('/connections', [PCAPController::class, 'connections'])->name('pcap.connections');
+    Route::get('/network', [PCAPController::class, 'network'])->name('pcap.network');
+    Route::get('/dns', [PCAPController::class, 'dns'])->name('pcap.dns');
+    Route::get('/http-headers', [PCAPController::class, 'http_headers'])->name('pcap.http-headers');
+    Route::get('/open-ports', [PCAPController::class, 'open_ports'])->name('pcap.open-ports');
+    Route::get('/pictures', [PCAPController::class, 'pictures'])->name('pcap.pictures');
+    Route::get('/http', [PCAPController::class, 'http'])->name('pcap.http');
+    Route::get('/smb', [PCAPController::class, 'smb'])->name('pcap.smb');
+    Route::get('/servers', [PCAPController::class, 'servers'])->name('pcap.servers');
+    Route::get('/documents', [PCAPController::class, 'documents'])->name('pcap.documents');
+    Route::get('/networks', [PCAPController::class, 'networks'])->name('pcap.networks');
+    Route::get('/ftp', [PCAPController::class, 'ftp'])->name('pcap.ftp');
+    Route::get('/telnet', [PCAPController::class, 'telnet'])->name('pcap.telnet');
+    Route::get('/ssdp', [PCAPController::class, 'ssdp'])->name('pcap.ssdp');
+    Route::get('/sip', [PCAPController::class, 'sip'])->name('pcap.sip');
+    Route::get('/arp', [PCAPController::class, 'arp'])->name('pcap.arp');
+    Route::get('/ethernet', [PCAPController::class, 'ethernet'])->name('pcap.ethernet');
+    Route::get('/wifi', [PCAPController::class, 'wifi'])->name('pcap.wifi');
+    Route::get('/host', [PCAPController::class, 'host'])->name('pcap.host');
+
+});
