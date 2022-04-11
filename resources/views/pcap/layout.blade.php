@@ -12,7 +12,6 @@
 
     @yield('content')
 
-    @include('pcap.layouts.footer')
 
     @include('pcap.layouts.scripts')
 </body>

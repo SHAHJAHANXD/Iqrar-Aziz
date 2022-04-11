@@ -23,6 +23,28 @@
                     <a href="" class="ml-15 text-black btn-padding">Download File</a>
                 </li>
             </ul>
+            <div class="main_content_iner ">
+                <div class="container-fluid plr_30 body_white_bg pt_30">
+                    <div class="row justify-content-center">
+            <div class="col-lg-6 col-xl-3">
+                <div class="white_box box_border mb_30 min_400">
+                    <div class="box_header ">
+                        <div class="main-title">
+                            <h3 class="mb-0">Disputed vs Overdue Invoices</h3>
+                        </div>
+                    </div>
+                    <canvas height="220px" id="doughutChart"></canvas>
+                    <div class="legend_style mt_10px">
+                        <li class="d-block"> <span style="background-color: #DF67C1;"></span> Disputed Invoices
+                        </li>
+                        <li class="d-block"> <span style="background-color: #6AE0BD;"></span> Overdue Invoices
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
             <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <div class="single_element">
